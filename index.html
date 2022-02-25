@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing component with toggle</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="bg__image bg__image--top">
+        <img src="./SVGs/bg-top.svg" alt="" />
+      </div>
+      <div class="bg__image bg__image--bottom">
+        <img src="./SVGs/bg-bottom.svg" alt="" />
+      </div>
+      <div class="pricing">
+        <div class="pricing__title pricing__title--modify">
+          <h1>Our Pricing</h1>
+        </div>
+        <div class="pricing__date">
+          <div class="pricing__text"><p>Annually</p></div>
+          <div class="pricing__toggle">
+            <div class="toggle__container">
+              <div class="toggle__circle"></div>
+            </div>
+          </div>
+          <div class="pricing__text"><p>Montlhy</p></div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card__heading">
+            <div class="card__title"><h2>Basic</h2></div>
+            <div class="card__price">
+              <h1><span>$</span>19.99</h1>
+            </div>
+          </div>
+          <div class="card__features">
+            <div class="card__feature">
+              <p>500 GB Storage</p>
+            </div>
+            <div class="card__feature">
+              <p>2 Users Allowed</p>
+            </div>
+            <div class="card__feature">
+              <p>Send up to 3 GB</p>
+            </div>
+          </div>
+          <div class="card__btn">
+            <button><h2>LEARN MORE</h2></button>
+          </div>
+        </div>
+        <div class="card card--pro">
+          <div class="card__heading">
+            <div class="card__title"><h2>Professional</h2></div>
+            <div class="card__price">
+              <h1><span>$</span>24.99</h1>
+            </div>
+          </div>
+          <div class="card__features">
+            <div class="card__feature">
+              <p>1 TB Storage</p>
+            </div>
+            <div class="card__feature">
+              <p>5 Users Allowed</p>
+            </div>
+            <div class="card__feature">
+              <p>Send up to 10 GB</p>
+            </div>
+          </div>
+          <div class="card__btn">
+            <button><h2>LEARN MORE</h2></button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__heading">
+            <div class="card__title"><h2>Master</h2></div>
+            <div class="card__price">
+              <h1><span>$</span>39.99</h1>
+            </div>
+          </div>
+          <div class="card__features">
+            <div class="card__feature">
+              <p>2 TB Storage</p>
+            </div>
+            <div class="card__feature">
+              <p>10 Users Allowed</p>
+            </div>
+            <div class="card__feature">
+              <p>Send up to 20 GB</p>
+            </div>
+          </div>
+          <div class="card__btn">
+            <button><h2>LEARN MORE</h2></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
