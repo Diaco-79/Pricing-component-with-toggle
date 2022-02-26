@@ -6,6 +6,7 @@
   --clr--fade: hsl(233, 13%, 49%);
   --clr--text: hsl(232, 13%, 33%);
   --clr--prices: hsl(232, 13%, 33%);
+  --trs--slide: all 150ms linear;
 }
 
 *,
@@ -37,6 +38,24 @@ ul {
   list-style: none;
 }
 
+h1::-moz-selection,
+h2::-moz-selection,
+p::-moz-selection,
+h3::-moz-selection,
+span::-moz-selection {
+  background: var(--clr--gradient-2);
+  color: white;
+}
+
+h1::selection,
+h2::selection,
+p::selection,
+h3::selection,
+span::selection {
+  background: var(--clr--gradient-2);
+  color: white;
+}
+
 h1 {
   color: var(--clr--prices);
 }
@@ -49,7 +68,31 @@ h3 {
   color: var(--clr--text);
 }
 
-button {
+.fade p {
+  color: var(--clr--fade-text) !important;
+}
+
+.transparent--pro {
+  background: transparent !important;
+  border: 1px solid #fff;
+}
+
+.transparent--pro h2 {
+  color: white !important;
+}
+
+.transparent {
+  background: white !important;
+  border: 1px solid var(--clr--gradient-2);
+}
+
+.transparent h2 {
+  color: var(--clr--gradient-2) !important;
+}
+
+@-webkit-keyframes transition {}
+
+@keyframes transition {}button {
   all: unset;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(var(--clr--gradient-1)), to(var(--clr--gradient-2)));
@@ -58,6 +101,14 @@ button {
   text-align: center;
   padding-block: 0.8rem;
   font: inherit;
+  -webkit-transition: var(--trs--slide) !important;
+  transition: var(--trs--slide) !important;
+  cursor: pointer;
+}
+
+button:hover {
+  -webkit-transform: translatey(-5px);
+          transform: translatey(-5px);
 }
 
 .wrapper {
@@ -152,11 +203,13 @@ button {
   aspect-ratio: 1;
   background: #fff;
   width: 1.625rem;
-  margin-left: auto;
+  margin-left: 50%;
+  -webkit-transition: var(--trs--slide);
+  transition: var(--trs--slide);
 }
 
 .pricing__text p {
-  color: var(--clr--fade-text);
+  color: var(--clr--gradient-2);
   font-size: 0.8rem;
 }
 
@@ -217,6 +270,24 @@ button {
 }
 
 .card--pro button h2 {
+  color: var(--clr--gradient-2);
+}
+
+.card--pro h1::-moz-selection,
+.card--pro h2::-moz-selection,
+.card--pro p::-moz-selection,
+.card--pro h3::-moz-selection,
+.card--pro span::-moz-selection {
+  background: #fff;
+  color: var(--clr--gradient-2);
+}
+
+.card--pro h1::selection,
+.card--pro h2::selection,
+.card--pro p::selection,
+.card--pro h3::selection,
+.card--pro span::selection {
+  background: #fff;
   color: var(--clr--gradient-2);
 }
 

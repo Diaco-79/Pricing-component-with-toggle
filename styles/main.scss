@@ -3,6 +3,7 @@
 // === table of content ===
 // 1- General styles
 // 2- Typography
+// 3- JSclasses
 // 3- Animations
 // 4- Buttons
 // 5- Mobile style
@@ -18,6 +19,10 @@
   --clr--fade: hsl(233, 13%, 49%);
   --clr--text: hsl(232, 13%, 33%);
   --clr--prices: hsl(232, 13%, 33%);
+
+  // transitions
+
+  --trs--slide: all 150ms linear;
 }
 
 *,
@@ -47,6 +52,17 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+p,
+h3,
+span {
+  &::selection {
+    background: var(--clr--gradient-2);
+    color: white;
+  }
+}
+
 // === Typography ===
 
 h1 {
@@ -60,8 +76,34 @@ h2 {
 h3 {
   color: var(--clr--text);
 }
+// === JSclasses ===
+
+.fade {
+  p {
+    color: var(--clr--fade-text) !important;
+  }
+}
+
+.transparent--pro {
+  background: transparent !important;
+  border: 1px solid #fff;
+  h2 {
+    color: white !important;
+  }
+}
+
+.transparent {
+  background: white !important;
+  border: 1px solid var(--clr--gradient-2);
+  h2 {
+    color: var(--clr--gradient-2) !important;
+  }
+}
 
 // === Animations ===
+
+@keyframes transition {
+}
 
 // === Buttons ===
 
@@ -83,6 +125,14 @@ button {
   padding-block: 0.8rem;
 
   font: inherit;
+
+  transition: var(--trs--slide) !important;
+
+  &:hover {
+    transform: translatey(-5px);
+  }
+
+  cursor: pointer;
 }
 
 // === Mobile style ===
@@ -160,12 +210,14 @@ button {
 
   width: 1.625rem;
 
-  margin-left: auto;
+  margin-left: 50%;
+
+  transition: var(--trs--slide);
 }
 
 .pricing__text {
   p {
-    color: var(--clr--fade-text);
+    color: var(--clr--gradient-2);
     font-size: 0.8rem;
   }
 }
@@ -208,6 +260,16 @@ button {
       color: var(--clr--gradient-2);
     }
     background: #fff;
+  }
+  h1,
+  h2,
+  p,
+  h3,
+  span {
+    &::selection {
+      background: #fff;
+      color: var(--clr--gradient-2);
+    }
   }
 }
 
